@@ -1,0 +1,42 @@
+// COLORS
+$color-primary-light: #a5d6a7;
+$color-primary: #4caf50;
+$color-primary-dark: #121212;
+
+$color-grey-light: #e1e1e1;
+$color-grey: #959595;
+$color-grey-dark: #555555;
+
+$color-black: #000;
+$color-white: #fff;
+
+$color-secondary-light: #D6A5D4;
+$color-secondary: #AF4CAB;
+$color-secondary-dark: rgba(white, .05);
+
+
+
+// FONT
+$font-family-primary: 'Urbanist', sans-serif;;
+$font-family-secondary: 'Orbitron', sans-serif;;
+// $font-family-tertiary: ;
+$font-size-xsmall: 1.2rem;
+$font-size-small: 1.5rem;
+$font-size-medium: 2.1rem;
+$font-size-large: 3.3rem;
+$font-size-xlarge: 4.5rem;
+$font-size-xxlarge: 5.4rem;
+
+// RESPONSIVE BREAKPOINTS
+// 1em = 16px
+$bp-largest: 75em;      // 1200px
+$bp-large: 56.25em;     // 900px
+$bp-medium: 37.5em;     // 600px
+$bp-small: 28.125em;    // 450px
+
+// COSMETICS
+$br: .9rem;  // border radius
+$bs-large: 0 0 1.2rem rgba($color-black, .3);   // box shadow
+$bs-small: 0 0 .6rem rgba($color-black, .3);    // box shadow
+// $bi-subtle: linear-gradient(to left, rgba($color-primary-light, .1), rgba($color-primary-dark, .1));    // background image
+// $b: 1px solid $color-secondary; // border

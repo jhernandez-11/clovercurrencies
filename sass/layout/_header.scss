@@ -1,0 +1,32 @@
+.header {
+    background: $color-secondary-dark;
+    height: max-content;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__title {
+        color: $color-white;
+        font-size: $font-size-large;
+    }
+
+    &__nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        color: $color-white;
+        font-size: $font-size-medium;
+
+        & *:hover {
+            cursor: pointer;
+            color: $color-secondary-light;
+        }
+
+        & *:active {
+            color: $color-secondary;
+            transform: scale(1.02);
+        }
+    }
+}

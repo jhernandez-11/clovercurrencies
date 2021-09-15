@@ -1,0 +1,61 @@
+.main {
+    height: calc((100vh * 2) - (7.9rem + 6.1rem + 6rem));
+
+    display: grid;
+    grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 6.1rem - 6rem);
+    align-items: center;
+    justify-items: center;
+    
+    &__sec1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        width: 90%;
+        height: 90%;
+
+        background-color: $color-secondary-dark;
+        padding: 6rem;
+        border-radius: $br;
+
+        &--logo {
+            width: 36rem;
+            height: 36rem;
+            background-color: $color-primary;
+            border-radius: $br;
+        }
+
+        &--info {
+            color: $color-white;
+            font-size: $font-size-medium;
+        }
+    }
+
+    &__sec2 {
+        background-color: $color-secondary-dark;
+
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+        height: 100%;
+
+
+        &--cont {
+            background-color: $color-primary-dark;
+            padding: 6rem;
+            border-radius: $br;
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            width: 90%;
+            height: 90%;
+
+            & * {
+                color: $color-white;
+                font-size: $font-size-medium;
+            }
+        }
+    }
+}
