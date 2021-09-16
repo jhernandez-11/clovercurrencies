@@ -5,6 +5,11 @@
     grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 6.1rem - 6rem);
     align-items: center;
     justify-items: center;
+
+    @include respond(tab-port) {
+        height: calc((100vh * 4) - (7.9rem + 6.1rem + 6rem));
+        grid-template-rows: calc(200vh - 7.9rem) calc(200vh - 6.1rem - 6rem);
+    }
     
     &__sec1 {
         display: grid;
@@ -18,6 +23,15 @@
         padding: 6rem;
         border-radius: $br;
 
+        @include respond(tab-land) {
+            width: 100%;
+        }
+
+        @include respond(tab-port) {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: 1fr;
+        }
+
         &--logo {
             width: 36rem;
             height: 36rem;
@@ -28,6 +42,11 @@
         &--info {
             color: $color-white;
             font-size: $font-size-medium;
+
+            @include respond(tab-port) {
+                align-self: baseline;
+                padding: 3rem;
+            }
         }
     }
 
@@ -52,9 +71,17 @@
             width: 90%;
             height: 90%;
 
+            @include respond(tab-land) {
+                width: 100%;
+            }
+
             & * {
                 color: $color-white;
                 font-size: $font-size-medium;
+
+                @include respond(tab-port) {
+                    padding: 3rem;
+                }
             }
         }
     }

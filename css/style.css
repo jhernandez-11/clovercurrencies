@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 54%; } }
 
 body {
   background-color: #121212; }
@@ -60,6 +63,10 @@ body {
   grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 6.1rem - 6rem);
   align-items: center;
   justify-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .main {
+      height: calc((100vh * 4) - (7.9rem + 6.1rem + 6rem));
+      grid-template-rows: calc(200vh - 7.9rem) calc(200vh - 6.1rem - 6rem); } }
   .main__sec1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -70,6 +77,13 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 6rem;
     border-radius: 0.9rem; }
+    @media only screen and (max-width: 75em) {
+      .main__sec1 {
+        width: 100%; } }
+    @media only screen and (max-width: 56.25em) {
+      .main__sec1 {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr; } }
     .main__sec1--logo {
       width: 36rem;
       height: 36rem;
@@ -78,6 +92,10 @@ body {
     .main__sec1--info {
       color: #fff;
       font-size: 2.1rem; }
+      @media only screen and (max-width: 56.25em) {
+        .main__sec1--info {
+          align-self: baseline;
+          padding: 3rem; } }
   .main__sec2 {
     background-color: rgba(255, 255, 255, 0.05);
     display: grid;
@@ -94,6 +112,12 @@ body {
       justify-items: center;
       width: 90%;
       height: 90%; }
+      @media only screen and (max-width: 75em) {
+        .main__sec2--cont {
+          width: 100%; } }
       .main__sec2--cont * {
         color: #fff;
         font-size: 2.1rem; }
+        @media only screen and (max-width: 56.25em) {
+          .main__sec2--cont * {
+            padding: 3rem; } }
