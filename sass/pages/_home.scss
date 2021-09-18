@@ -32,6 +32,10 @@
             grid-template-columns: 1fr;
         }
 
+        @include respond(phone) {
+            padding: 1.5rem;
+        }
+
         &--logo {
             width: 36rem;
             height: 36rem;
@@ -73,6 +77,10 @@
 
             @include respond(tab-land) {
                 width: 100%;
+            }
+
+            @include respond(phone) {
+                padding: 1.5rem;
             }
 
             & * {

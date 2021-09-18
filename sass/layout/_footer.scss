@@ -9,6 +9,12 @@
     align-items: center;
     justify-items: center;
 
+    @include respond(phone) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 21rem;
+    }
+
     & * {
         font-size: $font-size-medium;
         color: $color-primary-dark;

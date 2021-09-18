@@ -30,6 +30,11 @@ body {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: 21rem; } }
   .footer * {
     font-size: 2.1rem;
     color: #121212; }
@@ -50,12 +55,25 @@ body {
     justify-items: center;
     color: #fff;
     font-size: 2.1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__nav {
+        grid-template-columns: 1fr;
+        justify-items: end; } }
     .header__nav *:hover {
       cursor: pointer;
       color: #D6A5D4; }
     .header__nav *:active {
       color: #AF4CAB;
       transform: scale(1.02); }
+    @media only screen and (max-width: 37.5em) {
+      .header__nav *:not(:last-child) {
+        display: none;
+        visibility: hidden; } }
+    @media only screen and (min-width: 37.5em) {
+      .header__nav *:last-child {
+        display: none; } }
+    .header__nav--ion {
+      font-size: 3.3rem; }
 
 .main {
   height: calc((100vh * 2) - (7.9rem + 6.1rem + 6rem));
@@ -84,6 +102,9 @@ body {
       .main__sec1 {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: 1fr; } }
+    @media only screen and (max-width: 37.5em) {
+      .main__sec1 {
+        padding: 1.5rem; } }
     .main__sec1--logo {
       width: 36rem;
       height: 36rem;
@@ -115,6 +136,9 @@ body {
       @media only screen and (max-width: 75em) {
         .main__sec2--cont {
           width: 100%; } }
+      @media only screen and (max-width: 37.5em) {
+        .main__sec2--cont {
+          padding: 1.5rem; } }
       .main__sec2--cont * {
         color: #fff;
         font-size: 2.1rem; }
