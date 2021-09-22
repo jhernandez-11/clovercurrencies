@@ -38,5 +38,7 @@ $bp-small: 28.125em;    // 450px
 $br: .9rem;  // border radius
 $bs-large: 0 0 1.2rem rgba($color-black, .3);   // box shadow
 $bs-small: 0 0 .6rem rgba($color-black, .3);    // box shadow
+$transition: .3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+$rotate: rotate 90s infinite linear;
 // $bi-subtle: linear-gradient(to left, rgba($color-primary-light, .1), rgba($color-primary-dark, .1));    // background image
 // $b: 1px solid $color-secondary; // border

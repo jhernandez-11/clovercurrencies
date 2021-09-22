@@ -16,11 +16,10 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         justify-items: center;
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
 
-        background-color: $color-secondary-dark;
-        padding: 6rem;
+        padding: 0 6rem;
         border-radius: $br;
 
         @include respond(tab-land) {
@@ -33,41 +32,68 @@
         }
 
         @include respond(phone) {
-            padding: 1.5rem;
+            grid-template-rows: 1fr 100vh;
+            padding: 0;
         }
 
         &--logo {
             width: 36rem;
             height: 36rem;
-            background-color: $color-primary;
-            border-radius: $br;
+
+            & img {
+              width: 100%;  
+            }
         }
 
         &--info {
             color: $color-white;
             font-size: $font-size-medium;
+            background-color: $color-secondary-dark;
+            height: 90%;
+            border-radius: $br;
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            padding: 3rem;
 
             @include respond(tab-port) {
                 align-self: baseline;
-                padding: 3rem;
+                padding: 0 3rem;
+            }
+
+            @include respond(phone) {
+                padding: 0 3rem;
             }
         }
     }
 
     &__sec2 {
         background-color: $color-secondary-dark;
+        position: relative;
 
         display: grid;
+        grid-template-columns: 45vh 1fr;
         align-items: center;
         justify-items: center;
         width: 100%;
         height: 100%;
+
+        @include respond(tab-land) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include respond(phone) {
+            grid-template-rows: 1fr;
+        }
 
 
         &--cont {
             background-color: $color-primary-dark;
             padding: 6rem;
             border-radius: $br;
+            grid-column: 2 / 2;
 
             display: grid;
             align-items: center;
@@ -75,12 +101,9 @@
             width: 90%;
             height: 90%;
 
-            @include respond(tab-land) {
-                width: 100%;
-            }
-
             @include respond(phone) {
-                padding: 1.5rem;
+                padding: 0 3rem;;
+                width: 100%;
             }
 
             & * {
@@ -92,5 +115,38 @@
                 }
             }
         }
+    }
+}
+
+////////////////// Absolute Props //////////////////
+
+.copy {
+    position: absolute;
+    color: $color-white;
+    height: 3rem;
+    width: 100%;
+    font-size: $font-size-small;
+    padding-right: 3rem;
+    font-family: $font-family-secondary;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bg-anime {
+    width: 75vh;
+    position: absolute;
+    animation: $rotate;
+    justify-self: flex-start;
+    left: -37.5vh;
+
+    @include respond(phone) {
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        align-self: flex-end;
+        bottom: 6rem;
     }
 }
