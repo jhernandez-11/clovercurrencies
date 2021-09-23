@@ -1,10 +1,11 @@
 .main {
-    height: calc((100vh * 2) - (7.9rem + 6.1rem + 6rem));
+    height: calc((100vh * 2) - (7.9rem + 12rem));
 
     display: grid;
-    grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 6.1rem - 6rem);
+    grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 12rem);
     align-items: center;
     justify-items: center;
+    overflow: hidden;
 
     @include respond(tab-port) {
         height: calc((100vh * 4) - (7.9rem + 6.1rem + 6rem));
@@ -70,30 +71,27 @@
 
     &__sec2 {
         background-color: $color-secondary-dark;
-        position: relative;
 
         display: grid;
-        grid-template-columns: 45vh 1fr;
+        grid-template-columns: 30% 1fr;
         align-items: center;
         justify-items: center;
         width: 100%;
         height: 100%;
 
-        @include respond(tab-land) {
-            grid-template-columns: 1fr;
+        @include respond(tab-port) {
             grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: 1fr;
         }
 
         @include respond(phone) {
             grid-template-rows: 1fr;
         }
 
-
         &--cont {
             background-color: $color-primary-dark;
             padding: 6rem;
             border-radius: $br;
-            grid-column: 2 / 2;
 
             display: grid;
             align-items: center;
@@ -134,19 +132,32 @@
     align-items: center;
 }
 
+.anime-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+        grid-row: 2 / 2;
+        justify-content: center;
+    }
+}
+
 .bg-anime {
-    width: 75vh;
+    width: calc(60vh);
     position: absolute;
     animation: $rotate;
-    justify-self: flex-start;
-    left: -37.5vh;
+    left: -33vh;
+    
 
     @include respond(phone) {
         display: none;
     }
 
     @include respond(tab-port) {
-        align-self: flex-end;
-        bottom: 6rem;
+        
     }
 }

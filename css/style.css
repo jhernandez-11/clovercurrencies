@@ -14,12 +14,11 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 87.5em) {
     html {
       font-size: 54%; } }
 
 body {
-  position: relative;
   background-color: #121212; }
 
 body {
@@ -30,8 +29,7 @@ body {
 
 .footer {
   background: #fff;
-  height: max-content;
-  padding: 1.5rem;
+  height: 6rem;
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -100,12 +98,13 @@ body {
       font-size: 5.4rem; }
 
 .main {
-  height: calc((100vh * 2) - (7.9rem + 6.1rem + 6rem));
+  height: calc((100vh * 2) - (7.9rem + 12rem));
   display: grid;
-  grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 6.1rem - 6rem);
+  grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 12rem);
   align-items: center;
-  justify-items: center; }
-  @media only screen and (max-width: 56.25em) {
+  justify-items: center;
+  overflow: hidden; }
+  @media only screen and (max-width: 68.75em) {
     .main {
       height: calc((100vh * 4) - (7.9rem + 6.1rem + 6rem));
       grid-template-rows: calc(200vh - 7.9rem) calc(200vh - 6.1rem - 6rem); } }
@@ -118,10 +117,10 @@ body {
     height: 100%;
     padding: 0 6rem;
     border-radius: 0.9rem; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 87.5em) {
       .main__sec1 {
         width: 100%; } }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 68.75em) {
       .main__sec1 {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: 1fr; } }
@@ -144,7 +143,7 @@ body {
       align-items: center;
       justify-items: center;
       padding: 3rem; }
-      @media only screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 68.75em) {
         .main__sec1--info {
           align-self: baseline;
           padding: 0 3rem; } }
@@ -153,17 +152,16 @@ body {
           padding: 0 3rem; } }
   .main__sec2 {
     background-color: rgba(255, 255, 255, 0.05);
-    position: relative;
     display: grid;
-    grid-template-columns: 45vh 1fr;
+    grid-template-columns: 30% 1fr;
     align-items: center;
     justify-items: center;
     width: 100%;
     height: 100%; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 68.75em) {
       .main__sec2 {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr); } }
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr; } }
     @media only screen and (max-width: 37.5em) {
       .main__sec2 {
         grid-template-rows: 1fr; } }
@@ -171,7 +169,6 @@ body {
       background-color: #121212;
       padding: 6rem;
       border-radius: 0.9rem;
-      grid-column: 2 / 2;
       display: grid;
       align-items: center;
       justify-items: center;
@@ -184,7 +181,7 @@ body {
       .main__sec2--cont * {
         color: #fff;
         font-size: 2.1rem; }
-        @media only screen and (max-width: 56.25em) {
+        @media only screen and (max-width: 68.75em) {
           .main__sec2--cont * {
             padding: 3rem; } }
 
@@ -200,16 +197,22 @@ body {
   justify-content: flex-end;
   align-items: center; }
 
+.anime-cont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 68.75em) {
+    .anime-cont {
+      grid-row: 2 / 2;
+      justify-content: center; } }
+
 .bg-anime {
-  width: 75vh;
+  width: calc(60vh);
   position: absolute;
   animation: rotate 90s infinite linear;
-  justify-self: flex-start;
-  left: -37.5vh; }
+  left: -33vh; }
   @media only screen and (max-width: 37.5em) {
     .bg-anime {
       display: none; } }
-  @media only screen and (max-width: 56.25em) {
-    .bg-anime {
-      align-self: flex-end;
-      bottom: 6rem; } }
