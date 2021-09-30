@@ -16,35 +16,50 @@
     <title>Clover Currencies</title>
   </head>
   <body>
+
+    <!-- PHONE SIDE MENU -->
+    <div class="side-menu">
+        <div class="side-menu__justify">
+            <a class="header__nav1">List</a>
+            <a class="header__nav2">Buy</a>
+            <a class="header__nav3">News</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
     <header class="header">
         <div class="header__title">Clover Currencies</div>
-        <div class="header__nav">
+        <nav class="header__nav">
             <a class="header__nav1">List</a>
             <a class="header__nav2">Buy</a>
             <a class="header__nav3">News</a>
             <ion-icon class="header__nav--ion" name="menu-outline"></ion-icon>
-        </div>
+        </nav>
     </header>
 
+    <!-- MAIN -->
     <main class="main">
+        <!-- FIRST PT -->
         <div class="main__sec1">
             <div class="main__sec1--logo">
                 <img src="./public/images/logo-clover.png" alt="clover-logo">
             </div>
-            <div class="main__sec1--info">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa quasi ad nisi iusto dolores quod quia nemo sapiente distinctio! Unde aspernatur molestias libero numquam repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus et modi voluptatum numquam mollitia esse amet voluptates, quibusdam dolor excepturi vitae dolorem nihil nemo veniam officiis repellat harum, placeat enim. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quibusdam voluptatibus voluptate consequatur! Sunt dolore rerum temporibus vero reprehenderit voluptates, magni voluptate, officiis obcaecati sint, voluptas aliquam sit? Et, tenetur!</p>
-            </div>
+            <section class="main__sec1--info">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa quasi ad nisi iusto dolores quod quia nemo sapiente distinctio! Unde aspernatur molestias libero numquam repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus et modi voluptatum numquam mollitia esse amet voluptates, quibusdam dolor excepturi vitae dolorem nihil nemo veniam officiis repellat harum, placeat enim.</p>
+            </section>
         </div>
+        <!-- SEC PT -->
         <div class="main__sec2">
             <div class="anime-cont">
                 <img class="bg-anime" src="./public/images/logo-cloverV2.png" alt="bg-anime">
             </div>
-            <div class="main__sec2--cont">
+            <article class="main__sec2--cont">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum numquam, corrupti praesentium ex neque veritatis sed cupiditate saepe consequuntur dolore? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit non dolore sit dignissimos eligendi molestias veniam nam quasi dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae perferendis provident, autem similique cupiditate nam vero officia laborum error quo labore, facere expedita et ducimus. Quisquam eos ex praesentium natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni eius veritatis numquam recusandae aut perferendis dolorum quae!</p>
-            </div>
+            </article>
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <br>
         <a>About Us</a>
@@ -52,11 +67,13 @@
         <a>FAQs</a>
     </footer>
 
+    <!-- COPY -->
     <div class="copy"><p>&copy; 2021 Jose Hernandez</p></div>
 
     <!-- JS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/index.js"></script>
   </body>
 </html>

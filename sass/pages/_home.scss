@@ -65,6 +65,8 @@
 
             @include respond(phone) {
                 padding: 0 3rem;
+                text-justify: kashida;
+                text-align: justify;
             }
         }
     }
@@ -102,6 +104,8 @@
             @include respond(phone) {
                 padding: 0 3rem;;
                 width: 100%;
+                text-justify: kashida;
+                text-align: justify;
             }
 
             & * {
@@ -110,6 +114,11 @@
 
                 @include respond(tab-port) {
                     padding: 3rem;
+                }
+
+                @include respond(phone) {
+                    padding: 0;
+                    hyphens: auto;
                 }
             }
         }
@@ -147,10 +156,10 @@
 }
 
 .bg-anime {
-    width: calc(60vh);
+    width: 60vh;
     position: absolute;
     animation: $rotate;
-    left: -33vh;
+    left: -30vh;
     
 
     @include respond(phone) {

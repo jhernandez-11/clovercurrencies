@@ -1,0 +1,32 @@
+.side-menu {
+    width: 0%;
+    height: 100vh;
+    background: $color-primary;
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__justify {
+        display: grid;
+    }
+    
+
+    & * {
+        font-size: $font-size-large;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+
+    & *:hover {
+        cursor: pointer;
+        color: $color-secondary-light;
+    }
+
+    & *:active {
+        color: $color-secondary;
+    }
+}

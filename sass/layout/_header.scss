@@ -31,6 +31,7 @@
 
         & * {
             transition: $transition;
+            text-transform: uppercase;
         }
 
         & *:hover {
