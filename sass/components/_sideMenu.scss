@@ -11,6 +11,15 @@
 
     &__justify {
         display: grid;
+
+        & *:hover {
+            cursor: pointer;
+            color: $color-secondary-light;
+        }
+    
+        & *:active {
+            color: $color-secondary;
+        }
     }
     
 
@@ -19,14 +28,5 @@
         margin-bottom: 3rem;
         text-transform: uppercase;
         color: $color-white;
-    }
-
-    & *:hover {
-        cursor: pointer;
-        color: $color-secondary-light;
-    }
-
-    & *:active {
-        color: $color-secondary;
     }
 }
