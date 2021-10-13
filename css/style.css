@@ -32,6 +32,24 @@ body {
   border: none;
   cursor: pointer; }
 
+.sub-menu1 {
+  position: absolute;
+  background-color: #F6A564;
+  width: 0;
+  height: 9rem;
+  top: 0;
+  transform-origin: center;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center; }
+  .sub-menu1 * {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 0; }
+
 .side-menu {
   width: 0%;
   height: 100vh;
@@ -126,9 +144,10 @@ body {
       font-size: 5.4rem; }
 
 .main {
-  height: calc((100vh * 2) - (7.9rem + 12rem));
+  height: calc((100vh * 2) - (7.5rem + 12rem));
+  position: relative;
   display: grid;
-  grid-template-rows: calc(100vh - 7.9rem) calc(100vh - 12rem);
+  grid-template-rows: calc(100vh - 7.5rem) calc(100vh - 12rem);
   align-items: center;
   justify-items: center;
   overflow: hidden; }
