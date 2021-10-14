@@ -43,12 +43,10 @@ window.addEventListener("resize", () => {
 })
 
 ///////// Sub Menu Controls /////////
-const subMenu1 = document.querySelector(".sub-menu1");
-const main = document.querySelector(".main")
+const subMenu = document.querySelector(".sub-menu");
+const main = document.querySelector("main");
 
-const nav1 = document.querySelector(".header__nav1")
-const nav2 = document.querySelector(".header__nav2")
-const nav3 = document.querySelector(".header__nav3")
+const nav1 = document.querySelector(".header__nav1");
 
 let active2 = false
 
@@ -57,36 +55,38 @@ anime({
     translateY: -100
 })
 
-function asm(nav) {
+function asm() {
     const start = anime.timeline({
         easing: 'easeInSine',
     })
     .add({
-        targets: '.sub-menu1',
+        targets: '.sub-menu',
         translateY: 0,
         duration: 0
     })
     .add({
-        targets: '.sub-menu1',
+        targets: '.sub-menu',
         width: "100%",
         easing: 'easeInSine',
         opacity: 1,
+        duration: 450
     })
 }
 
-function dasm(nav) {
-    const start = anime.timeline({
+function dasm() {
+    const end = anime.timeline({
         easing: 'easeOutSine',
     })
     .add({
-        targets: '.sub-menu1',
+        targets: '.sub-menu',
         width: "0%",
         easing: 'easeInSine',
         opacity: 0,
+        duration: 450
         
     })
     .add({
-        targets: '.sub-menu1',
+        targets: '.sub-menu',
         translateY: -90,
     })
 }
@@ -105,7 +105,25 @@ nav1.addEventListener('click', () => {
         active2 = false
     }
 })
+
 main.addEventListener('click', () => {
     dasm()
     active2 = false
+})
+
+///////// Title Animation Controls /////////
+const title = document.querySelector(".header__title")
+
+  // Go to home page
+title.addEventListener('click', () => {
+    anime({
+        targets: '.header__title p',
+        opacity: 0,
+        duration: 90,
+        direction: 'reverse',
+        delay: anime.stagger(30),
+        complete: () => {
+            history.back()
+        }
+      })
 })

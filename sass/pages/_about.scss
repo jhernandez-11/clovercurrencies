@@ -1,0 +1,26 @@
+.main2 {
+    height: calc(100vh - 7.5rem - 9rem - 3rem - 9px);
+    width: 100vw;
+    color: $color-white;
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &__sec {
+        height: 90%;
+        width: 90%;
+        background-color: $color-secondary-dark;
+        padding: 6rem;
+
+        &--title {
+            font-size: $font-size-xlarge;
+        }
+
+        &--info {
+            font-size: $font-size-medium;
+        }
+    }
+
+}

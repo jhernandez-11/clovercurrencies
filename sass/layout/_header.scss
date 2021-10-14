@@ -2,6 +2,7 @@
     background: $color-secondary-dark;
     height: max-content;
     padding: 1.5rem;
+    cursor: pointer;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -13,6 +14,8 @@
         text-transform: uppercase;
         letter-spacing: .18rem;
         font-weight: 600;
+
+        display: flex;
     }
 
     &__nav {
@@ -60,4 +63,16 @@
             font-size: $font-size-xxlarge;
         }
     }
+}
+
+.pixel {
+    color: $color-primary;
+}
+
+.moon {
+    color: $color-primary;
+}
+
+.crypto {
+    color: $color-primary-light;
 }

@@ -3,7 +3,7 @@
     position: relative;
 
     display: grid;
-    grid-template-rows: calc(100vh - 7.5rem) calc(100vh - 12rem);
+    grid-template-rows: calc(100vh - 7.5rem) calc(100vh - 12rem - 9px);
     align-items: center;
     justify-items: center;
     overflow: hidden;
@@ -136,6 +136,7 @@
     font-size: $font-size-small;
     padding-right: 3rem;
     font-family: $font-family-secondary;
+    margin: 0;
 
     display: flex;
     justify-content: flex-end;

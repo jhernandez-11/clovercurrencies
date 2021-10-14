@@ -27,14 +27,20 @@ body {
   font-weight: 300;
   line-height: 4.5rem; }
 
+a {
+  text-decoration: none; }
+
+.mr-1 {
+  margin-right: 1rem; }
+
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   border: none;
   cursor: pointer; }
 
-.sub-menu1 {
+.sub-menu {
   position: absolute;
-  background-color: #F6A564;
+  background-color: #000;
   width: 0;
   height: 9rem;
   top: 0;
@@ -44,11 +50,15 @@ body {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center; }
-  .sub-menu1 * {
+  .sub-menu * {
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
     line-height: 0; }
+    .sub-menu *:hover {
+      color: #64b5f6; }
+    .sub-menu *:active {
+      color: #1e88e5; }
 
 .side-menu {
   width: 0%;
@@ -100,11 +110,15 @@ body {
       color: #64b5f6; }
     .footer *:active {
       color: #1e88e5; }
+  .footer__active {
+    color: #1e88e5;
+    cursor: default; }
 
 .header {
   background: rgba(255, 255, 255, 0.05);
   height: max-content;
   padding: 1.5rem;
+  cursor: pointer;
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
   .header__title {
@@ -113,7 +127,8 @@ body {
     font-family: "Press Start 2P", cursive;
     text-transform: uppercase;
     letter-spacing: .18rem;
-    font-weight: 600; }
+    font-weight: 600;
+    display: flex; }
   .header__nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -143,11 +158,20 @@ body {
     .header__nav--ion {
       font-size: 5.4rem; }
 
+.pixel {
+  color: #1e88e5; }
+
+.moon {
+  color: #1e88e5; }
+
+.crypto {
+  color: #64b5f6; }
+
 .main {
   height: calc((100vh * 2) - (7.5rem + 12rem));
   position: relative;
   display: grid;
-  grid-template-rows: calc(100vh - 7.5rem) calc(100vh - 12rem);
+  grid-template-rows: calc(100vh - 7.5rem) calc(100vh - 12rem - 9px);
   align-items: center;
   justify-items: center;
   overflow: hidden; }
@@ -248,6 +272,7 @@ body {
   font-size: 1.5rem;
   padding-right: 3rem;
   font-family: "Press Start 2P", cursive;
+  margin: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
@@ -271,3 +296,21 @@ body {
   @media only screen and (max-width: 37.5em) {
     .bg-anime {
       display: none; } }
+
+.main2 {
+  height: calc(100vh - 7.5rem - 9rem - 3rem - 9px);
+  width: 100vw;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
+  .main2__sec {
+    height: 90%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6rem; }
+    .main2__sec--title {
+      font-size: 4.5rem; }
+    .main2__sec--info {
+      font-size: 2.1rem; }

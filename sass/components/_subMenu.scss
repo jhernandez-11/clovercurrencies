@@ -1,6 +1,6 @@
-.sub-menu1 {
+.sub-menu {
     position: absolute;
-    background-color: $color-secondary-light;
+    background-color: $color-black;
     width: 0;
     height: 9rem;
     top: 0;
@@ -17,5 +17,13 @@
         color: $color-white;
         font-size: $font-size-small;
         line-height: 0;
+
+        &:hover {
+            color: $color-primary-light;
+        }
+
+        &:active {
+            color: $color-primary;
+        }
     }
 }

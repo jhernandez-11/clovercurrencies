@@ -38,4 +38,9 @@
             color: $color-primary;
         }
     }
+
+    &__active {
+        color: $color-primary;
+        cursor: default;
+    }
 }
