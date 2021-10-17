@@ -8,11 +8,21 @@
     align-items: flex-end;
     justify-content: center;
 
+    @include respond(phone) {
+        height: calc(150vh - 7.5rem - 9rem - 3rem - 9px);;
+    }
+
     &__sec {
         height: 90%;
         width: 90%;
         background-color: $color-secondary-dark;
         padding: 6rem;
+
+        @include respond(phone) {
+            width: 100%;
+            height: 96%;
+            padding: 3rem;
+        }
 
         &--title {
             font-size: $font-size-xlarge;
