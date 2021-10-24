@@ -44,3 +44,49 @@
         cursor: default;
     }
 }
+
+.footer2 {
+    background: $color-white;
+    height: 6rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+
+    @include respond(phone) {
+        grid-template-columns: repeat(3, 1fr);
+        height: 12rem;
+    }
+
+    & * {
+        font-size: $font-size-medium;
+        color: $color-primary-dark;
+        cursor: pointer;
+        transition: $transition;
+
+        @include respond(phone) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &:first-child {
+            @include respond(phone) {
+                display: none;
+            }
+        }
+        
+        &:hover {
+            color: $color-primary-light;
+        }
+
+        &:active {
+            color: $color-primary;
+        }
+    }
+
+    &__active {
+        color: $color-primary;
+        cursor: default;
+    }
+}

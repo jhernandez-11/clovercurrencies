@@ -1,10 +1,12 @@
 ///////// Side Menu Controls /////////
 const sideMenu = document.querySelector(".header__nav--ion");
+const listAll = document.querySelector(".header__nav4")
 let active = false;
+let active3 = false;
 
 // FIXES SIDE MENU ITEMS FROM BEING VISIBLE
 anime({
-    targets: '.side-menu',
+    targets: '.side-menu, .side-menu2',
     translateX: "-30vw"
   });
 
@@ -20,12 +22,33 @@ sideMenu.addEventListener("click", () => {
           active = true;
     } else {
         anime({
-            targets: '.side-menu',
+            targets: '.side-menu, .side-menu2',
             width: "0%",
             easing: 'easeOutSine'
           });
 
           active = false;
+          active3 = false;
+    }
+})
+
+listAll.addEventListener("click", () => {
+    if (!active3) {
+        anime({
+            targets: '.side-menu2',
+            width: "100%",
+            easing: 'easeInOutSine',
+          });
+
+          active3 = true;
+    } else {
+        anime({
+            targets: '.side-menu2',
+            width: "0%",
+            easing: 'easeOutSine'
+          });
+
+          active3 = false;
     }
 })
 
@@ -33,7 +56,7 @@ sideMenu.addEventListener("click", () => {
 window.addEventListener("resize", () => {
     if (window.innerWidth > 600) {
         anime({
-            targets: '.side-menu',
+            targets: '.side-menu, .side-menu2',
             width: "0%",
             easing: 'easeOutSine'
           });
@@ -123,7 +146,10 @@ title.addEventListener('click', () => {
         direction: 'reverse',
         delay: anime.stagger(30),
         complete: () => {
-            history.back()
+            window.location.href = '/index.html';
         }
       })
 })
+
+///////// AOS /////////
+AOS.init();

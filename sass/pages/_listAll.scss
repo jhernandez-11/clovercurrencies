@@ -1,0 +1,67 @@
+.main3 {
+    height: 540vh;
+    width: 100vw;
+    color: $color-white;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-port-xl) {
+        height: 300vh;
+    }
+
+    @include respond(tab-port) {
+        height: 400vh;
+    }
+
+    @include respond(phone) {
+        height: 630vh;
+    }
+
+    &__sec {
+        height: 96%;
+        width: 90%;
+        background-color: $color-secondary-dark;
+        padding: 6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include respond(phone) {
+            width: 100%;
+            height: 98%;
+            padding: 3rem;
+        }
+
+        &--title {
+            font-size: $font-size-xlarge;
+        }
+
+        &--info {
+            font-size: $font-size-medium;
+        }
+    }
+
+}
+
+.crypto-container {
+    margin-bottom: 3rem;
+    
+    & img {
+        width: 21rem;
+    }
+
+    &__title {
+        font-size: $font-size-large;
+        font-family: $font-family-secondary;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: $font-size-medium;
+    }
+}

@@ -72,16 +72,21 @@
             font-size: $font-size-xxlarge;
         }
     }
+
+    &__active {
+        cursor: default;
+        color: $color-primary;
+    }
 }
 
 .pixel {
-    color: $color-primary;
+    color: $color-secondary;
 }
 
 .moon {
-    color: $color-primary;
+    color: $color-secondary;
 }
 
 .crypto {
-    color: $color-primary-light;
+    color: $color-secondary-light;
 }
