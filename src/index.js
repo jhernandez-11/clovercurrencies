@@ -146,10 +146,20 @@ title.addEventListener('click', () => {
         direction: 'reverse',
         delay: anime.stagger(30),
         complete: () => {
-            window.location.href = '/index.html';
+            window.location.href = '/~gen94/week9-hw/';
         }
       })
 })
+
+///////// Moon Animation /////////
+anime({
+    targets: '#cg',
+    translateX: "-200%",
+    duration: 15000,
+    easing: 'easeInOutSine',
+    loop: true,
+    direction: 'alternate'
+});
 
 ///////// AOS /////////
 AOS.init();

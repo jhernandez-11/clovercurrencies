@@ -294,7 +294,8 @@ a {
         padding: 0; } }
     .main__sec1--logo {
       width: 36rem;
-      height: 36rem; }
+      height: 36rem;
+      display: flex; }
       .main__sec1--logo img {
         width: 100%; }
     .main__sec1--info {
@@ -303,6 +304,7 @@ a {
       background-color: rgba(255, 255, 255, 0.05);
       height: 90%;
       border-radius: 0.9rem;
+      z-index: 9;
       display: grid;
       align-items: center;
       justify-items: center;
@@ -391,10 +393,11 @@ a {
       display: none; } }
 
 .main3 {
-  height: 540vh;
+  height: max-content;
   width: 100vw;
   color: #fff;
   position: relative;
+  margin: 3rem 0;
   display: flex;
   align-items: center;
   justify-content: center; }
