@@ -38,28 +38,6 @@ a {
   border: none;
   cursor: pointer; }
 
-.sub-menu {
-  position: absolute;
-  background-color: #000;
-  width: 0;
-  height: 9rem;
-  top: 0;
-  transform-origin: center;
-  opacity: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center; }
-  .sub-menu * {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 0; }
-    .sub-menu *:hover {
-      color: #64b5f6; }
-    .sub-menu *:active {
-      color: #1e88e5; }
-
 .side-menu, .side-menu2 {
   width: 0%;
   height: 100vh;
@@ -173,8 +151,11 @@ a {
 .header {
   background: rgba(255, 255, 255, 0.05);
   height: max-content;
+  width: 100vw;
   padding: 1.5rem;
   cursor: pointer;
+  position: fixed;
+  z-index: 9;
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
   .header__title {
@@ -195,7 +176,7 @@ a {
         justify-items: center; } }
   .header__nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
     color: #fff;
@@ -206,7 +187,8 @@ a {
         justify-items: end; } }
     .header__nav * {
       transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      color: #fff; }
     .header__nav *:hover {
       cursor: pointer;
       color: #F6A564; }
@@ -220,7 +202,10 @@ a {
       .header__nav *:last-child {
         display: none; } }
     .header__nav--ion {
-      font-size: 5.4rem; }
+      font-size: 4.5rem; }
+    .header__nav--ion2 {
+      opacity: 0;
+      transform: translateX(21vw); }
   .header__active {
     cursor: default;
     color: #1e88e5; }
@@ -392,6 +377,10 @@ a {
     .bg-anime {
       display: none; } }
 
+.ph {
+  width: 100vw;
+  height: 7.5rem; }
+
 .main3 {
   height: max-content;
   width: 100vw;
@@ -401,15 +390,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center; }
-  @media only screen and (min-width: 62.5em) and (min-height: 81.25em) {
-    .main3 {
-      height: 300vh; } }
-  @media only screen and (max-width: 50em) and (max-height: 75em) {
-    .main3 {
-      height: 400vh; } }
-  @media only screen and (max-width: 37.5em) {
-    .main3 {
-      height: 630vh; } }
   .main3__sec {
     height: 96%;
     width: 90%;

@@ -66,72 +66,114 @@ window.addEventListener("resize", () => {
 })
 
 ///////// Sub Menu Controls /////////
-const subMenu = document.querySelector(".sub-menu");
-const main = document.querySelector("main");
-
-const nav1 = document.querySelector(".header__nav1");
+const nav1 = document.querySelector(".header__nav1"), 
+    nav2 = document.querySelector(".header__nav2"), 
+    nav3 = document.querySelector(".header__nav3"),
+    ion2 = document.querySelector(".header__nav--ion2");
 
 let active2 = false
 
-anime({
-    targets: '.sub-menu1',
-    translateY: -100
-})
-
-function asm() {
-    const start = anime.timeline({
-        easing: 'easeInSine',
-    })
-    .add({
-        targets: '.sub-menu',
-        translateY: 0,
-        duration: 0
-    })
-    .add({
-        targets: '.sub-menu',
-        width: "100%",
-        easing: 'easeInSine',
-        opacity: 1,
-        duration: 450
-    })
-}
-
-function dasm() {
-    const end = anime.timeline({
-        easing: 'easeOutSine',
-    })
-    .add({
-        targets: '.sub-menu',
-        width: "0%",
-        easing: 'easeInSine',
-        opacity: 0,
-        duration: 450
-        
-    })
-    .add({
-        targets: '.sub-menu',
-        translateY: -90,
-    })
-}
-
-nav1.addEventListener('mouseover', () => {
-    asm()
-    active2 = true
-})
-
-nav1.addEventListener('click', () => {
-    if (!active2) {
-        asm()
+const activateSm = () => {
+     if (!active2) {
         active2 = true
-    } else {
-        dasm()
-        active2 = false
+            anime({
+                targets: ".header__nav1, .header__nav2, .header__nav3",
+                opacity: 0,
+                easing: 'easeOutSine',
+                duration: 600,
+                complete: () => {
+                    nav1.innerHTML = 'All';
+                    nav2.innerHTML = 'New';
+                    nav3.innerHTML = 'Trending';
+        
+                    let href = new String(window.location.href)
+        
+                    if (href.includes('list') || href.includes('trending')) {
+                        nav1.setAttribute("href", "./listAll.html")
+                        nav2.setAttribute("href", "./listNew.html")
+                        nav3.setAttribute("href", "./trending.html")
+                    } else {
+                        nav1.setAttribute("href", "./html/listAll.html")
+                        nav2.setAttribute("href", "./html/listNew.html")
+                        nav3.setAttribute("href", "./html/trending.html")
+                    }
+        
+                    if (href.includes('trending')) {
+                        nav3.removeAttribute('href')
+                        nav3.classList.add("header__active")
+                    } 
+                    if (href.includes('listNew')) {
+                        nav2.removeAttribute('href')
+                        nav2.classList.add("header__active")
+                    }
+                    if (href.includes('listAll')) {
+                        nav1.removeAttribute('href')
+                        nav1.classList.add("header__active")
+                    }
+                    
+        
+                    anime({
+                        targets: ".header__nav1, .header__nav2, .header__nav3",
+                        opacity: 1,
+                        easing: 'easeInSine',
+                        duration: 600,
+                    })
+        
+                    anime({
+                        targets: ".header__nav--ion2",
+                        opacity: 1,
+                        translateX: 0
+                    })
+                }
+            })
     }
-})
+}
 
-main.addEventListener('click', () => {
-    dasm()
+nav1.addEventListener('click', activateSm)
+
+ion2.addEventListener('click', () => {
     active2 = false
+
+    anime({
+        targets: ".header__nav1, .header__nav2, .header__nav3",
+        opacity: 0,
+        easing: 'easeOutSine',
+        duration: 600,
+        complete: () => {
+            nav1.innerHTML = 'LIST';
+            nav2.innerHTML = 'BUY';
+            nav3.innerHTML = 'NEWS';
+
+            nav1.setAttribute("href", '#')
+            nav2.setAttribute("href", "#")
+            nav3.setAttribute("href", "#")
+
+            anime({
+                targets: ".header__nav1, .header__nav2, .header__nav3",
+                opacity: 1,
+                easing: 'easeInSine',
+                duration: 600,
+            })
+
+            anime({
+                targets: ".header__nav--ion2",
+                opacity: 0,
+                translateX: "25vw"
+            })
+        }
+    })
+
+    let href = new String(window.location.href)
+
+    if (href.includes('trending')) {
+        nav3.classList.remove("header__active")
+    } 
+    if (href.includes('listNew')) {
+        nav2.classList.remove("header__active")
+    }
+    if (href.includes('listAll')) {
+        nav1.classList.remove("header__active")
+    }
 })
 
 ///////// Title Animation Controls /////////
@@ -146,7 +188,12 @@ title.addEventListener('click', () => {
         direction: 'reverse',
         delay: anime.stagger(30),
         complete: () => {
-            window.location.href = '/~gen94/week9-hw/';
+            if (window.location.href.includes('gen94')) {
+                window.location.href = '/~gen94/week9-hw/';
+            } else {
+                window.location.href = '/index.html';
+            }
+            
         }
       })
 })

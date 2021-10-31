@@ -9,18 +9,6 @@
     align-items: center;
     justify-content: center;
 
-    @include respond(tab-port-xl) {
-        height: 300vh;
-    }
-
-    @include respond(tab-port) {
-        height: 400vh;
-    }
-
-    @include respond(phone) {
-        height: 630vh;
-    }
-
     &__sec {
         height: 96%;
         width: 90%;

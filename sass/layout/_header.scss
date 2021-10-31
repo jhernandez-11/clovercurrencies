@@ -1,8 +1,11 @@
 .header {
     background: $color-secondary-dark;
     height: max-content;
+    width: 100vw;
     padding: 1.5rem;
     cursor: pointer;
+    position: fixed;
+    z-index: 9;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,7 +32,7 @@
 
     &__nav {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         align-items: center;
         justify-items: center;
 
@@ -44,6 +47,7 @@
         & * {
             transition: $transition;
             text-transform: uppercase;
+            color: $color-white;
         }
 
         & *:hover {
@@ -69,7 +73,12 @@
         }
 
         &--ion {
-            font-size: $font-size-xxlarge;
+            font-size: $font-size-xlarge;
+        }
+
+        &--ion2 {
+            opacity: 0;
+            transform: translateX(21vw);
         }
     }
 
