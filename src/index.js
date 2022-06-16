@@ -191,7 +191,7 @@ title.addEventListener('click', () => {
             if (window.location.href.includes('gen94')) {
                 window.location.href = '/~gen94/week9-hw/';
             } else {
-                window.location.href = '/index.html';
+                window.location.href = '/pixelmooncrypto';
             }
             
         }
